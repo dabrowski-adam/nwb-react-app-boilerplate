@@ -18,5 +18,11 @@ module.exports = {
               locales: ['en']
           }
       }
+  },
+  karma: {
+    frameworks: ['mocha', 'chai', 'chai-as-promised'],
+    plugins: [
+        require('karma-chai-plugins') // Provides chai, chai-as-promised, ...
+    ]
   }
 }
