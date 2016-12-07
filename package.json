@@ -1,0 +1,29 @@
+{
+  "name": "nwb-react-app-boilerplate",
+  "version": "0.1.0",
+  "description": "Quickly set up a react app with redux and routing using nwb.",
+  "private": false,
+  "scripts": {
+    "build": "nwb build-react-app",
+    "clean": "nwb clean-app",
+    "start": "nwb serve-react-app",
+    "test": "nwb test",
+    "test:coverage": "nwb test --coverage",
+    "test:watch": "nwb test --server"
+  },
+  "dependencies": {
+    "ramda": "^0.22.1",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "react-redux": "^4.4.6",
+    "react-router": "^3.0.0",
+    "react-router-redux": "^4.0.7",
+    "react-thunk": "^1.0.0"
+  },
+  "devDependencies": {
+    "nwb": "0.12.x"
+  },
+  "author": "Adam Dąbrowski",
+  "license": "MIT",
+  "repository": "https://github.com/dabrowski-adam/nwb-react-app-boilerplate.git"
+}
