@@ -1,32 +1,35 @@
-import './App.css'
+import './app.css';
 
-import React, { Component, PropTypes } from 'react'
-import { connect } from 'react-redux'
-import { appFlip } from '../actions/app'
+import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
+//import { appFlip } from '../actions/app';
 
 class App extends Component {
-  const { flip, isFlipped } = this.props;
   render() {
+    const { side } = this.props;
+
     return <div className="App">
-      <a href="flipped" onClick={flip()}>{isFlipped ? 'HEADS' : 'TAILS'}</a>
-    </div>
-  };
+      <h1>Hello World!</h1>
+      { side }
+    </div>;
+  }
 }
 
 App.proptypes = {
-  flip: PropTypes.func.isRequired,
-  isFlipped: PropTypes.bool.isRequired
+  //flip: PropTypes.func.isRequired,
+  //isFlipped: PropTypes.bool.isRequired
 };
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
   return {
-    isFlipped: state.appIsFlipped
+    //anchor: ownProps.params.anchor, 
+    //isFlipped: ownProps.location
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    flip: () => dispatch(appFlip())
+    //flip: (e) => dispatch(appFlip(e))
   }
 };
 

@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import { routerReducer } from 'react-router-redux'
-import * as appReducers from './app.js';
+import { routerReducer } from 'react-router-redux';
+import { appIsFlipped } from './app.js';
 
 export default combineReducers({
-    routing: routerReducer,
-    ...appReducers
+    appIsFlipped,
+    routing: routerReducer
 });
